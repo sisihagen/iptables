@@ -1,0 +1,14 @@
+[Unit]
+Description=Hardening TCP Stack
+After=tcp_stack_hardening.service
+
+[Service]
+ExecStart=/usr/local/bin/firewall.sh
+TimeoutSec=30
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=350
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# created 2020-02-11
+# Silvio Siefke <siefke@mail.ru>
 
 ### network adapter 
 out_ad=$(ip route get 8.8.8.8 | awk -- '{printf $5}')
